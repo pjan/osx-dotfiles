@@ -88,6 +88,8 @@ cask things
 cask sublime-text
 cask omni-graffle-pro
 cask querious
+cask x-quartz
+cask dropbox
 
 # remove the outdated binaries
 brew cleanup
