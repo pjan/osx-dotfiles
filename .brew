@@ -1,0 +1,93 @@
+#!/usr/bin/env bash
+
+# ruby <(curl -fsSkL raw.github.com/mxcl/homebrew/go)
+
+# Make sure we're using the latest homebrew
+brew update
+
+# Upgrade the already installed formulas
+brew upgrade
+
+# Add other tabs
+brew tap homebrew/dupes
+brew tap phinze/homebrew-cask
+brew tap homebrew/versions
+
+# Install bash 4
+brew install bash
+
+# Install developer tools
+brew install apple-gcc42
+brew install gfortran
+brew install lua52
+brew install automake
+brew install libtool
+
+# Install security tools
+brew install nmap
+brew install gpg
+brew install gpgme
+brew install tor
+
+# Install wget with IRI support
+brew install wget --enable-iri
+
+# Install other binaries
+brew install ack
+brew install git
+brew install readline
+brew install coreutils
+brew install findutils
+brew install colordiff
+brew install gettext
+brew install lzo
+brew install ngrep
+brew install libjpeg
+brew install geoip
+brew install xz
+brew install rsync
+brew install v8
+brew install libxml2
+brew install libxslt
+
+# Audio & video binaries
+brew install faac
+brew install lame
+brew install libogg
+brew install pkg-config
+brew install libvorbis
+brew install theora
+brew install yasm
+brew install libvpx
+brew install x264
+brew install xvid
+brew install ffmpeg
+brew install mkvtoolnix
+brew install jhead
+brew install atomicparsley
+
+
+function cask() {
+    brew cask install "${@}" 2> /dev/null
+}
+
+cask google-chrome
+cask google-chrome-canary
+cask cloudapp
+cask skype
+cask firefox
+cask vlc
+cask delibar
+cask transmit
+cask google-drive
+cask transmission
+cask virtualbox
+cask the-unarchiver
+cask iterm2
+cask things
+cask sublime-text
+cask omni-graffle-pro
+cask querious
+
+# remove the outdated binaries
+brew cleanup
