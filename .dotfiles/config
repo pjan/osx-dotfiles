@@ -1,5 +1,0 @@
-#!/bin/bash
-
-export COMPUTER_NAME       = "AKIRA"
-export HOST_NAME           = "AKIRA"
-export LOCAL_HOST_NAME     = "AKIRA" # no spaces here!

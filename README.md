@@ -35,7 +35,7 @@ Add the same time, it can be used to override aliases, functions, settings from 
 
 ### OS X defaults
 
-To load a new set of (better) defaults after setting up your Mac, execute:
+To load a new set of (better) defaults after setting up your Mac, update the config file in your home folder, then execute:
 
 ```bash
 ./.setdefaults

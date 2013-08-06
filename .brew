@@ -66,6 +66,7 @@ brew install mkvtoolnix
 brew install jhead
 brew install atomicparsley
 
+brew install brew-cask
 
 function cask() {
     brew cask install "${@}" 2> /dev/null
