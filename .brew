@@ -67,31 +67,31 @@ brew install mkvtoolnix
 brew install jhead
 brew install atomicparsley
 
-brew install brew-cask
+# brew install brew-cask
 
-function cask() {
-    brew cask install "${@}" 2> /dev/null
-}
+# function cask() {
+#     brew cask install "${@}" 2> /dev/null
+# }
 
-cask google-chrome
-cask google-chrome-canary
-cask cloudapp
-cask skype
-cask firefox
-cask vlc
-cask delibar
-cask transmit
-cask google-drive
-cask transmission
-cask virtualbox
-cask the-unarchiver
-cask iterm2
-cask things
-cask sublime-text
-cask omni-graffle-pro
-cask querious
-cask x-quartz
-cask dropbox
+# cask google-chrome
+# cask google-chrome-canary
+# cask cloudapp
+# cask skype
+# cask firefox
+# cask vlc
+# cask delibar
+# cask transmit
+# cask google-drive
+# cask transmission
+# cask virtualbox
+# cask the-unarchiver
+# cask iterm2
+# cask things
+# cask sublime-text
+# cask omni-graffle-pro
+# cask querious
+# cask x-quartz
+# cask dropbox
 
 # remove the outdated binaries
 brew cleanup
