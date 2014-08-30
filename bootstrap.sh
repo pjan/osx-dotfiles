@@ -1,12 +1,29 @@
 #!/usr/bin/env bash
-cd "$(dirname "${BASH_SOURCE}")"
-git pull origin master
-function doIt() {
-    rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" \
-        --exclude "README.md" --exclude "LICENSE" \
-        -av --no-perms . ~
-    source ~/.bash_profile
+
+# Functions
+update_repo() {
+  cd "$(dirname "${BASH_SOURCE}")"
+  git pull origin master
 }
+
+install_repo() {
+    cd "$(dirname "${BASH_SOURCE}")"
+  rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" \
+    --exclude "README.md" --exclude "LICENSE" \
+    -av --no-perms . ~
+}
+
+resource() {
+  source ~/.profile
+}
+
+doIt() {
+  update_repo
+  install_repo
+  resource
+}
+
+# MAIN
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
     doIt
 else
@@ -16,4 +33,8 @@ else
         doIt
     fi
 fi
+
+unset update_repo
+unset install_repo
+unset resource
 unset doIt
