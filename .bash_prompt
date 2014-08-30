@@ -31,13 +31,19 @@ style_chars="\[${RESET}${SOLAR_WHITE}\]"
 style_branch="${RESET}${SOLAR_CYAN}"
 style_state="${RESET}${SOLAR_BLUE}"
 
-if [[ "$SSH_TTY" ]]; then
-    # connected via ssh
-    style_host="\[${BOLD}${SOLAR_RED}\]"
-elif [[ "$USER" == "root" ]]; then
-    # logged in as root
+# Highlight the user name when logged in as root
+if [[ "$USER" == "root" ]]; then
     style_user="\[${BOLD}${SOLAR_RED}\]"
-fi
+else
+    style_user="\[${RESET}${SOLAR_ORANGE}\]"
+fi;
+
+# Highlight the hostname when connected via SSH
+if [[ "$SSH_TTY" ]]; then
+    style_host="\[${BOLD}${SOLAR_RED}\]"
+else
+    style_host="\[${RESET}${SOLAR_YELLOW}\]"
+fi;
 
 # Git status information
 prompt_git() {
