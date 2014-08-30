@@ -10,7 +10,6 @@ brew upgrade
 
 # Add other tabs
 brew tap homebrew/dupes
-brew tap phinze/homebrew-cask
 brew tap homebrew/versions
 
 # Install bash 4
