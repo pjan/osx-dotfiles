@@ -63,6 +63,7 @@ brew install pigz
 brew install pv
 brew install rename
 brew install sqlmap
+brew install the_silver_searcher
 brew install tree
 brew install ucspi-tcp
 brew install webkit2png
